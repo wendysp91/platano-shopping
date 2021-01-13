@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from '../../../models/item';
+import { Item } from '../../models/item';
+import { ItemService } from '../../services/item.service'
 
 @Component({
   selector: 'app-items',
@@ -11,26 +12,11 @@ export class ItemsComponent implements OnInit {
   items: Item[] = [];
   total: number = 0;
 
-  constructor() { }
+  constructor(private itemService:ItemService) { }
 
   ngOnInit() {
-    this.items = [
-      {
-        id: 0,
-        title: 'manzana',
-        price: 10,
-        quantity: 5,
-        completed: false
-      },
-      {
-        id: 1,
-        title: 'pan',
-        price: 2.5,
-        quantity: 8,
-        completed: true
-      }
-    ];
-    
+    //this.items = [];
+    this.items = this.itemService.getItems();
     this.getTotal();
   }
   deleteItem(item:Item){

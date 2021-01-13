@@ -1,3 +1,20 @@
-<p>
-  add-item works!
-</p>
+<form action="" (ngSubmit)="onSubmit()">
+  <h2>Agregar un nuevo articulo</h2>
+  <div>
+    <label for="">Id</label>
+    <input type="text" name="id" id="" [(ngModel)]="id"> 
+  </div>
+  <div>
+    <label for="">Nombre</label>
+    <input type="text" name="title" id="" [(ngModel)]="title"> 
+  </div>
+  <div>
+    <label for="">Price</label>
+    <input type="text" name="price" id="" [(ngModel)]="price">
+  </div>
+  <div>
+    <label for="">Quantity</label>
+    <input type="text" name="quantity" id="" [(ngModel)]="quantity">
+  </div>
+  <input type="submit" value="Agregar">
+</form>

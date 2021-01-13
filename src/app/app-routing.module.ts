@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ItemsComponent } from './components/itemsss/items/items.component';
+import { ItemsComponent } from './components/items/items.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
 
 
