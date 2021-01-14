@@ -12,6 +12,7 @@ import { ItemsComponent } from './components/items/items.component';
 import { TotalComponent } from './components/total/total.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
 import { ItemService } from './services/item.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ItemService } from './services/item.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ItemService],
   bootstrap: [AppComponent]
